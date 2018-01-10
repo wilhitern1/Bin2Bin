@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <link rel="stylesheet" href="CSS_MC92_CE.CSS">
+        <link rel="icon" href="data:;base64,iVBORwOKGO=" />
+		<title>SAP </title>
+        <script src="js.js"></script>
+        <script src="placemessage.js"></script>
+        
+	</head>
+
+<!--	<body onload="hideFooter()" onresize="hideFooter()" >  -->
+	<body onload="chsLoad()" 
+          onresize="hideFooter()" 
+          onkeydown = "keyActions()" 
+    >       
+  <!--      on =  "placeMessage(0)" >    -->
+
+        <div class="header">
+            <p class="header_prime">
+                SAP
+<!-- SAP will get CSS with background, 100% width, fixed size to top, Fixed heigth
+     black color, 10 px padding -->               
+            </p>
+            <p class="header_sub">
+            </p>
+        </div> 
+        <div class="logon-1">
+            <form id="logonId" 
+                onsubmit = "clearPassword()"
+                action = "" 
+                method = "GET" 
+            >
+<!--        onkeydown = "if (event.keyCode == 13) fldTest()" 
+            onsubmit = emptySubmit()   onsubmit = "return false;"  -->           
+                Client
+                <input type="text" name="SAP-Client" id="SAP-Client" value="010" maxlength="3" onblur=clientLangTest()>
+                <br /><br /><br /><br />
+                User
+                <input type="text" name="SAP-User" id="SAP-User" > 
+                <!-- onblur JS will remove all trailing "*" before testing the password -->
+                <br /><br />
+                Password 
+                <!-- will remove all trailing "*" before testing the password -->
+                <input type="password" name="SAP-PW" id="SAP-PW" maxlength="20">
+                <br /><br /><br /><br />
+<!-- https://www.w3schools.com/howto/howto_js_password_validation.asp
+     How to validate passwords...-->
+                Language
+                <input type="text" name="SAP-Spras" id="SAP-Spras" value="EN" maxlength="2" onblur=clientLangTest()> 
+                <br /><br />
+<!--                <input type="submit" id="hiddenSubmit" >  -->
+                <input type="text" name="SAP-Screen" id="SAP-Screen" value="0100" maxlength="4" > 
+                <br /><br />
+            </form>
+
+            
+        </div>
+        <div class="footer">
+            <p class="footer-1" ondblclick="" >
+                Message Box
+            </p>
+            <p class="footer-2">
+               <img src="SAP_logo.gif" alt="SAP Logo" style="height:18px"> 
+            </p>
+            <p class="footer-3">                            
+                XXX (1) 000&#160&#160
+            </p>
+            
+        </div>
+	</body>
+
+</html>

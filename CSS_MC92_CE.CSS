@@ -1,0 +1,313 @@
+* {
+    background-color: #EEF8FC;  /* Empty screen color is Lavender */
+    font-size: 100%;   
+}
+
+/* *************** Global form sections *************** */
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 48px;
+    background-color: white;
+    color: black;
+    text-align: left;
+
+}
+
+.header_prime {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: #A1BBE5;
+    color: black;
+    text-align: left;
+    font-style: italic;
+    font-weight: bolder;
+    font-family: 'sans-serif';
+    padding: 10px;
+}
+
+.header_sub {
+    position: fixed;
+    left: 0;
+    top: 38px;
+    width: 100%;
+    height: 18px;
+    background-color: #C4D6EF;
+    color: black;
+    text-align: left;
+    padding: 10px;
+}
+
+
+.footer-1 {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 50%;
+    height: 18px;
+    background-color: white;
+    color: black;
+    text-align: left;
+    display: none;
+    white-space: nowrap;
+}
+
+.footer-2 {
+    position: fixed;
+    left: 50%;
+    bottom: 0;
+    width: 15%;
+    height: 18px;
+    background-color: white;
+    color: black;
+    text-align: center;
+}
+
+.footer-3 {
+    position: fixed;
+    left: 65%;
+    bottom: 0;
+    width: 35%;
+    height: 18px;
+    background-color: white;
+    color: black;
+    text-align: right;
+}
+
+
+/* *************** All logon Fields *************** */
+.logon-1 {
+    position: fixed;
+    left: 0;
+    top: 98px;
+    width: 25%;
+    background-color: #EEF8FC;
+    color: black;
+    text-align: left;
+    padding-left: 10px;
+}
+
+/* *************** Fields individually from index.html *************** */
+#SAP-Client {
+    position:fixed;
+    left: 20%;
+    width: 30px;
+}
+
+#SAP-User {
+    position:fixed;
+    left: 20%;
+    width: 255px;
+}
+
+#SAP-PW {
+    position:fixed;
+    left: 20%;
+    width: 95px;
+}
+
+#SAP-Spras {
+    position:fixed;
+    left: 20%;
+    width: 25px;
+}
+
+#SAP-Screen {
+    position:fixed;
+    left: 20%;
+    width: 36px;
+    display: none;
+}
+
+
+
+/* *************** Fields from Bin2Bin.html *************** */
+/* #SAP-WHs in SAP is Domain LGNUM, Char 3, Value Table T300 */
+/* In PXT, only 5 warehouses exist.  X20 is Greer 2.  */
+/* All are 3 characters */
+#SAP-WHs {
+    position:fixed;
+    left: 20%;
+    width: 45px;
+    margin-top: 2px;
+    margin-bottom: 2px;  
+    background-color: #ffec99;
+}
+
+/* #SAP-STyp in SAP is Domain LGTYP, Char 3, Value Table T301 */
+/* X20 is Greer 2 */
+#SAP-STyp {
+    position:fixed;
+    left: 20%;
+    width: 45px;
+    margin-top: 2px;
+    margin-bottom: 2px;   
+    background-color: #ffec99;
+}
+
+/* #SAP-FBin in SAP is Domain LGPLA, Char 10, Value Table LAGP */
+/* Formatted as styp-6 digits or 123-456789 */
+#SAP-FBin {
+    position:fixed;
+    left: 20%;
+    width: 90px;
+    margin-top: 2px;
+    margin-bottom: 2px;  
+    background-color: #ffec99;
+}
+
+/* #SAP-MTyp in SAP is Domain BWART, Char 3, Value Table T156 */
+/* there are currently 252 movement types */
+/* only the 6A-6W series allows alpha combinations */
+#SAP-MTyp {
+    position:fixed;
+    left: 20%;
+    width: 45px;
+    margin-top: 2px;
+    margin-bottom: 2px;  
+    background-color: #ffec99;
+}
+
+/* #SAP-Matnr in SAP is Domain MATNR, Char 3, Value Table MARA */
+/* MATNR is typically 9 digits (unformatted) or formatted to "1234567-89" */
+#SAP-Matnr {
+    position:fixed;
+    left: 20%;
+    width: 90px;
+    margin-top: 2px;
+    margin-bottom: 2px;   
+    background-color: #ffec99;
+}
+
+/* #SAP-Menge in SAP is Domain MENG13, Quant 13.3, decimals depending on Meins */
+#SAP-Menge {
+    position:fixed;
+    left: 20%;
+    width: 126px;
+    margin-top: 2px;
+    margin-bottom: 2px;   
+    background-color: #ffec99;
+}
+
+/* #SAP-Meins in SAP is Domain MEINS, Unit 3, Value Table T006 */
+#SAP-Meins {
+    position:fixed;
+    left: 20%;
+    width: 45px;
+    margin-top: 2px;
+    margin-bottom: 2px;  
+    background-color: #ffec99;
+}
+
+/* #SAP-TBin in SAP is Domain LGPLA Char 10 Value Table LAGP */
+/* Formatted as styp-6 digits or 123-456789 */
+#SAP-TBin {
+    position:fixed;
+    left: 20%;
+    width: 90px;
+    margin-top: 2px;
+    margin-bottom: 2px; 
+    background-color: #ffec99;
+}
+
+/* *************** fields individually from Bin2Bin.html  *************** */
+/*#toBin {
+    margin-top: 4px;   
+}*/
+
+
+/* *************** All Buttons  *************** */
+.myButton {
+    position: fixed;
+    left: 0;
+    top: 98px;
+/*    width: 25%; */
+    background-color: #EEF8FC;
+    color: black;
+    text-align: left;
+    padding-left: 10px;
+}
+
+/* *************** First Button on process-choose.html  *************** */
+#myButton-i {
+    margin-left: 104px;
+    width: 100px;
+    background-color: #ffec99;
+    color: black;
+    text-align: center;
+    padding-left: 10px;
+}
+
+/* *************** Control Buttons  *************** */
+.myButton1 {
+    width: 100px;
+    background-color: #ffec99;
+    text-align: center;
+    font-size: 100%;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+/* *************** Process buttons Buttons  *************** */
+.myButton2 {
+    width: 204px;
+    background-color: #ffec99;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* *************** Last Process Button  *************** */
+.myButton3 {
+    width: 204px;
+    background-color: #ffec99;
+    text-align: center;
+/*    margin-bottom: 20px; */
+}
+
+/* *************** Process Field  *************** */
+#slctFld {
+    width: 50px;
+    background-color: #ffec99;
+}
+
+/* *************** Global hidden submit transfer fields *************** */
+.logon-h {
+    position:fixed;
+    top: 500px;
+    left: 0;
+    width: 25%;
+    background-color: #EEF8FC;
+    color: black;
+    text-align: left;
+    padding-left: 10px;
+}
+
+.SAP-ClientH {
+    position:fixed;
+    left: 20%;
+    width: 30px;
+}
+
+.SAP-UserH {
+    position:fixed;
+    left: 20%;
+    width: 255px;
+}
+
+.SAP-PWH {
+    position:fixed;
+    left: 20%;
+    width: 95px;
+}
+
+.SAP-SprasH {
+    position:fixed;
+    left: 20%;
+    width: 25px;
+}
+
+

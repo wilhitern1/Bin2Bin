@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <link rel="stylesheet" href="CSS_MC92_CE.CSS">      
+        <link rel="icon" href="data:;base64,iVBORwOKGO=" />        
+		<title>SAP </title>
+        <script src="js.js"></script>
+        <script src="placemessage.js"></script>
+
+	</head>
+
+	<body onload="chsLoad()" 
+          onresize="hideFooter()" 
+          onkeydown = "keyActions()"
+    >     
+        <div class="header">
+            <p class="header_prime">
+                SAP
+<!-- SAP will get CSS with background, 100% width, fixed size to top, Fixed heigth
+     black color, 10 px padding -->               
+            </p>
+            <p class="header_sub">
+<!--                New password -->
+<!-- need element to shape sub header? -->
+            </p>
+        </div> 
+        <div class="myButton">
+            <form id = "procChoForm"
+                onsubmit = "clearPassword()"
+                onload= "fillForm()" 
+                action = ""
+                method = "GET"
+            >             
+                <input type="button" value="F2 Clr" 
+                       id="myButton-i"
+                       onclick="runClr()"  
+                       onfocus =  "placeMessage(0)" />
+                <br />
+                <input type="button" value="F3 Back" 
+                       class="myButton1" 
+                       onfocus =  "placeMessage(0)" 
+                       onclick= "goBack()" />      
+                <input type="button" value="F4 Next" 
+                       class="myButton1" 
+                       onclick = "placeMessage(13)" 
+                       onfocus =  "placeMessage(0)" />
+                <br />
+                <input type="button" value="1.GR Putaway \>" 
+                       class="myButton2" 
+                       onclick = "placeMessage(13)" 
+                       onfocus = "placeMessage(0)" />
+                <br />
+                <input type="button" value="2. Warehousing \>" 
+                       class="myButton2" 
+                       onclick = "placeMessage(13)"                       
+                       onfocus = "placeMessage(0)" />
+                <br />
+                <input type="button" value="3. Packaging \>" 
+                       class="myButton2" 
+                       onclick = "placeMessage(13)" 
+                       onfocus = "placeMessage(0)" /> 
+                <br />
+                <input type="button" value="4. Loading \>" 
+                       class="myButton2" 
+                       onclick = "placeMessage(13)" 
+                       onfocus = "placeMessage(0)" /> 
+                <br />
+                <input type="button" value="5. Loading Cargo \>" 
+                       class="myButton2"  
+                       onclick = "placeMessage(13)" 
+                       onfocus = "placeMessage(0)" /> 
+                <br />
+                <input type="button" value="6. Inquiries \>"
+                       class="myButton2"  
+                       onclick = "placeMessage(13)" 
+                       onfocus = "placeMessage(0)" /> 
+                <br />
+                <input type="button" value="7. Bin 2 Bin \>" 
+                       class="myButton3" Id="bin2BinBtn"
+                       onfocus = "placeMessage(0)" 
+                       onclick = "submitbin2bin()" 
+                       /> 
+                <br />
+                <input type="button" value="F8 LOff" 
+                       class="myButton1"  
+                       onclick = "goLogoff()" 
+                       onfocus = "placeMessage(0)" /> 
+                &#160&#160Slct&#160&#160
+                <input type="text" name="Slct" id="slctFld"  
+                       /> 
+                
+<!--    onfocus = "placeMessage(0)"
+        onsubmit = emptySubmit()       
+        onclick = "whatClick()">     -->
+                <br /><br /><br /><br />
+            </form>
+        </div>
+        
+        
+         <div class="logon-h" style="display:none"> 
+            <form id="logonId">
+                Client
+                <input type="text" name="SAP-Client" id="SAP-ClientH" maxlength="3" >
+                <br /><br /><br /><br />
+                User
+                <input type="text" name="SAP-User" id="SAP-UserH" > 
+                <!-- onblur JS will remove all trailing "*" before testing the password -->
+                <br /><br />
+                Password 
+                <!-- will remove all trailing "*" before testing the password -->
+                <input type="password" name="SAP-PW" id="SAP-PWH" maxlength="20">
+                <br /><br /><br /><br />
+<!-- https://www.w3schools.com/howto/howto_js_password_validation.asp
+     How to validate passwords...-->
+                Language
+                <input type="text" name="SAP-Spras" id="SAP-SprasH" maxlength="2"> <br /><br />
+<!--                <input type="submit" id="hiddenSubmit" >  -->
+                <input type="text" name="SAP-Screen" id="SAP-Screen" value="0100" maxlength="4" > <br /><br />                
+            </form>   
+        </div>       
+        
+        
+        <div class="footer">
+            <p class="footer-1">
+                Message Box
+            </p>
+            <p class="footer-2">
+               <img src="SAP_logo.gif" alt="SAP Logo" style="height:18px"> 
+            </p>
+            <p class="footer-3">                            
+                XXX (1) <span id="SAP-mandt">000</span>&#160&#160
+            </p>
+            
+        </div>
+	</body>
+
+</html>

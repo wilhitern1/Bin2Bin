@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <link rel="stylesheet" href="CSS_MC92_CE.CSS">
+        <link rel="icon" href="data:;base64,iVBORwOKGO=" />
+		<title>SAP </title>
+        <script src="js.js"></script>
+        <script src="placemessage.js"></script>        
+	</head>
+
+	<body onload="chsLoad()" onresize="hideFooter()" >     
+        <div class="header">
+            <p class="header_prime">
+                Bin2Bin TO
+<!-- SAP will get CSS with background, 100% width, fixed size to top, Fixed heigth
+     black color, 10 px padding -->               
+            </p>
+            <p class="header_sub">
+                <img src="S_F_SAVE.gif" alt="Save" style="height:18px" onclick=goSave() >    
+<!--                New password     Save%20Button%20Icon.png   -->
+<!-- need element to shape sub header? -->
+            </p>
+        </div> 
+        <div class="myButton">
+            <form id="bin2BinFrm"
+                onload="fillForm()" 
+                onkeydown = "keyActions()" 
+            >
+<!--                 onsubmit = "return false;"   -->                
+                <input type="button" value="F2 Clr" 
+                       id="myButton-i"
+                       onclick="runClr()"  
+                       onfocus =  "placeMessage(0)" />
+                <br />
+                <input type="button" value="F3 Back" 
+                       class="myButton1" 
+                       onfocus =  "placeMessage(0)" 
+                       onclick= "goBack()" />      
+                <br /> <br />
+                
+                Warehouse
+                <input type="text" name="SAP-WHs" id="SAP-WHs" value="X20"  maxlength=3 > 
+                <br /> <br />
+                Stor. Typ. 
+                <input type="text" name="SAP-STyp" id="SAP-STyp" maxlength=3 >
+                <br /> <br />
+                From Bin
+                <input type="text" name="SAP-FBin" id="SAP-FBin" maxlength=10> 
+                <br /> <br />
+                Mov. Typ. 
+                <input type="text" name="SAP-MTyp" id="SAP-MTyp"  maxlength=3 >
+                <br /> <br />            
+                Material
+                <input type="text" name="SAP-Matnr" id="SAP-Matnr"  maxlength=10> 
+                <br /> <br />
+                Quantity 
+                <input type="text" name="SAP-Menge" id="SAP-Menge"  maxlength=14>
+                <br /> <br />
+                UOM
+                <input type="text" name="SAP-Meins" id="SAP-Meins"  maxlength=3 > 
+                <br /> <br />
+                <span id="toBin">To Bin</span>
+                <input type="text" name="SAP-TBin" id="SAP-TBin"  maxlength=10>
+                <br /> <br />               
+                
+                <input type="button" value="F8 LOff" 
+                       class="myButton1"  
+                       onclick = "goLogoff()" 
+                       onfocus = "placeMessage(0)" /> 
+
+                <br /><br /><br /><br />
+                <div class="logon-h" style="display:none"> 
+                    Client
+                    <input type="text" name="SAP-Client" id="SAP-ClientH" 
+                    maxlength="3" >
+                    <br /><br /><br /><br />
+                    User
+                    <input type="text" name="SAP-User" id="SAP-UserH" > 
+<!-- onblur JS will remove all trailing "*" before testing the password -->
+                    <br /><br />
+                    Password 
+<!-- will remove all trailing "*" before testing the password -->
+                    <input type="password" name="SAP-PW" id="SAP-PWH" 
+                    maxlength="20">
+                    <br /><br /><br /><br />
+<!-- https://www.w3schools.com/howto/howto_js_password_validation.asp
+     How to validate passwords...-->
+                    Language
+                    <input type="text" name="SAP-Spras" id="SAP-SprasH" 
+                    maxlength="2"> 
+                    <br /><br />
+<!--                <input type="submit" id="hiddenSubmit" >  -->
+                    <input type="text" name="SAP-Screen" id="SAP-Screen" value="0100" maxlength="4" > 
+                    <br /><br />                
+                </div>    
+            </form>
+        </div>
+        
+        <div class="footer">
+            <p class="footer-1">
+                Message Box
+            </p>
+            <p class="footer-2">
+               <img src="SAP_logo.gif" alt="SAP Logo" style="height:18px"> 
+            </p>
+            <p class="footer-3">                            
+                XXX (1) <span id="SAP-mandt">000</span>&#160&#160
+            </p>
+            
+        </div>
+	</body>
+
+</html>
