@@ -1,6 +1,7 @@
 # Bin2Bin
 SAP LM01 screens - Initial implementation of Bin to Bin transaction without SAP connectivity
 
+<p>
 ##############################################################   
 | Coder - Neal Wilhite   XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  |   
 | Proj - Practice Web Design                                 |   
@@ -13,4 +14,4 @@ SAP LM01 screens - Initial implementation of Bin to Bin transaction without SAP 
 | v1.0   11/17/2017      Initial version sent to Jason       |   
 | v1.1   01/04/2018      Eliminates Slct check fail & submit |   
 ##############################################################   
-   
+</P>   
